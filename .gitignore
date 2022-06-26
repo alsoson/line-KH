@@ -1,0 +1,9 @@
+node_modules
+.env
+images
+template/text-template.js
+template/template.js
+3-bubbles.json
+bubbles.json
+123456package.json
+line.rar
