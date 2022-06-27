@@ -18,14 +18,18 @@ bot.on('message', (event) => {
   if (data.attractions.length === 0) {
     event.reply('資料讀取中，請稍後再試')
   } else if (event.message.type === 'text') {
-    if (event.message.text == '更多景點') {
+    if (event.message.text == '推薦景點') {
       data.replyAttractions2(event)
-    } else if (event.message.text == '秘密景點') {
+    } else if (event.message.text == '私房景點') {
+      data.replyAttractions4(event)
+    } else if (event.message.text == '熱門景點') {
+      data.replyTop10Attractions(event)
+    }
+    else if (event.message.text == '更多景點') {
       data.replyAttractions3(event)
-    } else if (event.message.text == '景點') {
-      data.replyAttractions(event)
-    } else {
-      event.reply('輸入景點或更多景點或是超多景點')
+    }
+    else {
+      event.reply('可輸入 熱門景點 或 推薦景點 或是 更多景點 私房景點 作為選擇喔~')
     }
   }
 })
